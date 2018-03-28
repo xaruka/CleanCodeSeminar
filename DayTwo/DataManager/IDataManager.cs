@@ -8,6 +8,6 @@ namespace DayTwo.DataManager
     {
         Task ExecuteAsync(IDataCmd<TContext> cmd);
 
-        IDataCmdFactory<TEntity, TContext> CreateCmdFactory<TEntity>() where TEntity : IDataEntity;
+        IDataCmdFactory<TEntity, TContext> CreateCmdFactory<TEntity>() where TEntity : class, IDataEntity;
     }
 }

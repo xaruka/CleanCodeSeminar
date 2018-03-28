@@ -19,7 +19,7 @@ namespace DayTwo.DataManager.Json
             await cmd.ExecuteAsync(new JsonFileContext(file));
         }
 
-        public IDataCmdFactory<TEntity, JsonFileContext> CreateCmdFactory<TEntity>() where TEntity : IDataEntity
+        public IDataCmdFactory<TEntity, JsonFileContext> CreateCmdFactory<TEntity>() where TEntity : class, IDataEntity
         {
             return new JsonCmdFactory<TEntity>();
         }

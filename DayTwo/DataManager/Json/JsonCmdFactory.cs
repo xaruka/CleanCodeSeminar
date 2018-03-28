@@ -1,6 +1,6 @@
 ﻿namespace DayTwo.DataManager.Json
 {
-    public class JsonCmdFactory<TEntity> : IDataCmdFactory<TEntity, JsonFileContext> where TEntity : IDataEntity
+    public class JsonCmdFactory<TEntity> : IDataCmdFactory<TEntity, JsonFileContext> where TEntity : class, IDataEntity
     {
         public IReadDataCmd<TEntity, JsonFileContext> CreateReadCommand()
         {

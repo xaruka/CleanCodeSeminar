@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace DayTwo.DataManager.Json
 {
-    public class JsonInsertDataCmd<TEntity> : IInsertDataCmd<JsonFileContext> where TEntity : IDataEntity
+    public class JsonInsertDataCmd<TEntity> : IInsertDataCmd<JsonFileContext> where TEntity : class, IDataEntity
     {
         private readonly TEntity entity;
 
