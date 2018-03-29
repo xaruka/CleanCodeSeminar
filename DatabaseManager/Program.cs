@@ -35,11 +35,4 @@ namespace DatabaseManager
                 Console.WriteLine($"{person.Forename} {person.Surname}");
         }
     }
-
-    internal class Person
-    {
-        public int EntityId { get; set; }
-        public string Forename { get; set; }
-        public string Surname { get; set; }
-    }
 }
